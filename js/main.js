@@ -47,8 +47,7 @@ function displayData(){
   document.getElementById("tableBody").innerHTML=temp;
 }
 function visitSite(index){
-  // window.open("http://www.google.com/");
-  window.open(listOfSite[index].url);
+  window.open("http://"+listOfSite[index].url);
 }
 function deleteSite(index){
 listOfSite.splice(index,1);
