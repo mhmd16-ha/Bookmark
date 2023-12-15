@@ -1,0 +1,88 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: Righteous;
+    src: url(../webfonts/Righteous-Regular.ttf);
+}
+::selection{
+    background-color: #fec260;
+}
+h1{
+    font-family: Pacifico;
+    font-size: 50px;
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    z-index: 5587;
+}
+input::placeholder{
+    font-weight: 500;
+}
+h1::after{
+    content: "";
+    width: 100%;
+    height: 15%;
+    background-color: #fec260;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+h1:hover::after{
+    height: 25%;
+}
+h2{
+    font-family: Righteous;
+    font-size: 25px;
+    background-image: linear-gradient(to right,#3ca55c,#fec260);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg{
+    background-color: #f7ecde;
+}
+.borderDott{
+    border-top: dotted 2px;
+    border-bottom: dotted 2px;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-orange{
+    background-color: #d1512d;
+    color: white;
+    font-weight: bold;
+}
+.btn-green{
+    background-color: #9eb23b;
+    color: white;
+    font-weight: bold;
+}
+.btn-red{
+    background-color: #eb1d36;
+    color: white;
+    font-weight: bold;
+}
+.btn-orange:hover{
+    background-color: #bb4120;
+    color: white;
+    font-weight: bold;
+}
+.btn-green:hover{
+    background-color: #8a9e23;
+    color: white;
+    font-weight: bold;
+}
+.btn-red:hover{
+    background-color: #d30820;
+    color: white;
+    font-weight: bold;
+}
+

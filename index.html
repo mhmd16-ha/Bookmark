@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg">
+    <div class="container">
+        <h1 class="text-center py-5">Bookmarker</h1>
+        <div class="container row justify-content-center borderDott">
+            <h2 class="text-center mt-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark"></i></h2>
+            <form>
+                <label class="fw-semibold pb-3 pt-5"><i class="fa-solid fa-book-bookmark pe-2" for="SiteName"></i>Site
+                    Name</label>
+                <input onkeyup="siteNameValidation()" placeholder="Bookmark Name" type="text" id="SiteName"
+                    class="form-control" />
+                <label class="fw-semibold pb-3 pt-4"><i class="fa-solid fa-link pe-2"" for=" SiteURL"></i>Site
+                    URL</label>
+                <input onkeyup="siteURLValidation()" placeholder="Website URL" type="text" id="SiteURL"
+                    class="form-control" />
+            </form>
+            <button class="btn btn-orange mt-4 mb-3 col-2"
+                type="button">Submit</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="..." aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table mt-3 text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
