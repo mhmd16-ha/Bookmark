@@ -38,15 +38,19 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <div class="d-flex">
+                            <div class="rounded-circle bg-info circle"></div>
+                            <div class="rounded-circle bg-danger circle mx-2"></div>
+                            <div class="rounded-circle bg-success circle"></div>
+                        </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <p class="fw-bold fs-5">Site Name or Url is not valid, Please follow the rules below :</p>
+                        <ul class="list-unstyled">
+                            <li class="fs-5"><i class="fa-regular fa-circle-right p-2 text-danger"></i>Site name must contain at least 3 characters</li>
+                            <li class="fs-5"><i class="fa-regular fa-circle-right p-2 text-danger"></i>Site URL must be a valid one</li>
+                        </ul>
                     </div>
                 </div>
             </div>

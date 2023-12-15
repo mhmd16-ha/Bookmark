@@ -23,7 +23,6 @@ function addSite() {
   }else{
     submitBtn.setAttribute("data-bs-toggle","modal")
     submitBtn.setAttribute("data-bs-target","#staticBackdrop")
-  
   }
  
 }
@@ -83,6 +82,6 @@ function siteURLValidation(){
 // for(var i=0;i<deleteBtns.length;i++){
 //    deleteBtns[i].addEventListener("click",function(e){
 //     console.log(deleteBtns.indexOf(e.target));
-//     // deleteSite(deleteBtns.indexOf(e.target))
+// deleteSite(deleteBtns.indexOf(e.target))
 //   })
 // }
