@@ -4,14 +4,16 @@ var submitBtn=document.querySelector(".btn-orange");
 submitBtn.addEventListener("click",addSite)
 
 
-
 var listOfSite = [];
 if(localStorage.getItem("listOfSite")!=null){
 listOfSite=JSON.parse(localStorage.getItem("listOfSite"));
 displayData();
 }
+
 function addSite() {
   if(siteNameValidation()==true&&siteURLValidation()==true){
+    submitBtn.removeAttribute("data-bs-toggle","modal")
+    submitBtn.removeAttribute("data-bs-target","#staticBackdrop")
     var site={
       name:siteName.value,
       url:siteURL.value,
@@ -46,10 +48,10 @@ function displayData(){
   document.getElementById("tableBody").innerHTML=temp;
 }
 function visitSite(index){
-  window.open("http://"+listOfSite[index].url);
+  window.open(listOfSite[index].url);
 }
-function deleteSite(index){
-listOfSite.splice(index,1);
+function deleteSite(i){
+listOfSite.splice(i,1);
 localStorage.setItem("listOfSite",JSON.stringify(listOfSite))
 displayData();
 }
@@ -66,7 +68,15 @@ function siteNameValidation(){
   }
 }
 function siteURLValidation(){
-  var regex=/^[A-Za-z0-9]{3,}\.[A-Za-z0-9]{2,4}$/
+  var regex=new RegExp(
+    '^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', // fragment locator
+    'i'
+  );
   if(regex.test(siteURL.value)==true){
     siteURL.classList.add("is-valid")
     siteURL.classList.remove("is-invalid")
@@ -78,10 +88,4 @@ function siteURLValidation(){
   }
 }
 
-// var deleteBtns=Array.from(document.querySelectorAll(".btn-red"));
-// for(var i=0;i<deleteBtns.length;i++){
-//    deleteBtns[i].addEventListener("click",function(e){
-//     console.log(deleteBtns.indexOf(e.target));
-// deleteSite(deleteBtns.indexOf(e.target))
-//   })
-// }
+
