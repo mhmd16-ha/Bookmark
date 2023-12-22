@@ -30,12 +30,13 @@
                     class="form-control" />
             </form>
             <button class="btn btn-orange mt-4 mb-3 w-20"
-                type="button">Submit</button>
+                type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!-- <div class=" "> -->
+        <!-- <div class="modal fade boxModel" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="..." aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered ">
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="d-flex">
@@ -54,7 +55,35 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+      <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
         </div>
+      </div>
+        <!-- </div> -->
         <table class="table mt-3 text-center">
             <thead>
                 <tr>

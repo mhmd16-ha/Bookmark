@@ -92,4 +92,29 @@ h2{
     width: fit-content;
     padding-inline: 25px;
 }
-
+.box-info {
+    background-color: #0007;
+  }
+  
+  .box-conent {
+    width: 500px;
+    z-index: 10;
+  }
+  .box-info {
+    background-color: #0007;
+  }
+  .circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .circles span:nth-child(1) {
+    background-color: #f15f5d;
+  }
+  .circles span:nth-child(2) {
+    background-color: #febe2e;
+  }
+  .circles span:nth-child(3) {
+    background-color: #4db748;
+  }
